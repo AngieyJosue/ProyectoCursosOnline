@@ -91,7 +91,23 @@
               <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>Eliminar</a>            
             </div>
             </center>
+            
         </div> 
+        <!--
+        <div class="row">
+            <div class="col s12">
+                <a href="#modalIngles" class="btn modal-trigger">Ver Detalle</a>
+                        <div class="col s12 modal" id="modalIngles">
+                            <h4>Curso de Inglés Básico</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                            <div class="action-bar">
+                                <a href="#" class="btn-flat modal-action modal-close"></a>
+                            </div>
+                        </div>    
+            </div>
+        </div>-->
         <div class="row">
             <div class="col s12">            
                 <table class="bordered hoverable responsive-table">
@@ -131,6 +147,7 @@
            $(document).ready(function(){
                $('select').material_select();
                $('.datepicker').pickadate();
+               $('.modal-trigger').leanModal();
            })
        </script>
   </body>
