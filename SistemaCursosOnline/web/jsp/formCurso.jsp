@@ -18,19 +18,19 @@
 <body>
 
   <div class="container">
-    <h3><font color="#ee6e73" size="30">Formulario de Mantenimiento de Cursos</font></h3>
+    <h3 class="center-align"><font color="#ee6e73">Formulario de Mantenimiento de Cursos</font></h3>
      <div class="row">
       <form class="col s12">
         <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s12 l4">
               <input id="idCurso" type="text" class="validate">
               <label for="idCurso">Id Curso</label>
             </div>
-            <div class="input-field col s4">
+            <div class="input-field col s12 l4">
               <input id="idMultimedia" type="text" class="validate">
               <label for="idMultimedia">Id Multimedia</label>
             </div>
-            <div class="input-field col s4">
+            <div class="input-field col s12 l4">
                 <select name="idPersona" id="idPersona">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -41,34 +41,34 @@
             </div>                       
         </div>
         <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s12 l4">
               <input id="nombreCurso" type="text" class="validate">
               <label for="nombreCurso">Nombre del Curso</label>
             </div>            
-            <div class="input-field col s4">
+            <div class="input-field col s12 l4">
               <input id="costo" type="text" class="validate">
               <label for="costo">Costo del Curso</label>
             </div>
-            <div class="input-field col s4">
+            <div class="input-field col s12 l4">
               <input id="costo" type="text" class="validate">
               <label for="costo">Número de Participantes</label>
             </div>   
         </div>
         <div class="row">
-            <div class="col s6">
+            <div class="col s6 l6">
                 <label for="fechaInicio">Fecha Inicio</label>
             </div> 
-            <div class="col s6">
+            <div class="col s6 l6">
                 <label for="fechaFinalizacion">Fecha Finalización</label>
             </div> 
         </div>
         <div class="row">
-             <div class="input-field col s6">                
+             <div class="input-field col s6 l6">                
                 <i class="material-icons prefix">perm_contact_calendar</i>
                 <input id="fechaInicio" type="date" class="datepicker">
               
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s6 l6">
               <i class="material-icons prefix">perm_contact_calendar</i>
               <input id="fechaFinalizacion" type="date" class="datepicker">              
             </div>                                    
@@ -88,13 +88,13 @@
         </div>
         <div class="row">
             <center>
-            <div class="input-field col s4">
+            <div class="input-field col s12 l4">
               <a class="waves-effect waves-light btn"><i class="material-icons left">done</i>Insertar</a>                     
             </div>
-               <div class="input-field col s4">           
+               <div class="input-field col s12 l4">           
               <a class="waves-effect waves-light btn"><i class="material-icons left">assignment</i>Modificar</a>                     
             </div>
-            <div class="input-field col s4">            
+            <div class="input-field col s12 l4">            
               <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>Eliminar</a>            
             </div>
             </center>

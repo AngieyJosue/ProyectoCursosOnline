@@ -668,7 +668,7 @@ a#loginButton img {
 }
 /*--content--*/
 .content_top{
-	background:#ef9a9a;
+	background:#0097a7;
 	padding:13px 0 5px;
 	border-bottom: 1px solid #E6E5E5;
 }
@@ -1704,7 +1704,7 @@ ul.footer_social li a i.u_tube {
 	color:#fff;
 }
 p.price {
-	float: right;
+	float: left;
 	color:#566375;
 	font-size:18px;
 }

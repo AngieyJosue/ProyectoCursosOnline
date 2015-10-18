@@ -47,7 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    	<li><a href="jsp/cursos.jsp">CURSOS</a></li>
 						    	<li><a href="jsp/diplomados.jsp">DIPLOMADOS</a></li>
 						    	<li><a href="jsp/ofertas.jsp">OFERTAS</a></li>
-						    	<li><a href="jsp/404.jsp">Mobility</a></li>
+						    	<li><a href="jsp/404.jsp">CONTACTO</a></li>
 								<div class="clearfix"></div>
                                                     </ul>
 							<script type="text/javascript" src="javaScript/responsive-nav.js"></script>
@@ -190,7 +190,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    			<div class="col-md-3">
    			  <div class="grid1">
    				<div class="view view-first">
-                  <div class="index_img"><img src="multimedia/imagenes/idiomas.png" class="img-responsive" alt=""/></div>
+                  <div class="index_img"><img src="multimedia/imagenes/idiomas2.png" class="img-responsive" alt=""/></div>
    				    <%--<div class="sale"></div>Precio --%>
    			          <div class="mask">
                         <div class="info"><i class="search"> </i> Prerrequisitos del curso</div>
@@ -214,7 +214,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    	<div class="col-md-3">
    			  <div class="grid1">
    				<div class="view view-first">
-                  <div class="index_img"><img src="multimedia/imagenes/pic1.jpg" class="img-responsive" alt=""/></div>
+                  <div class="index_img"><img src="multimedia/imagenes/manualidades.jpg"  class="img-responsive" alt=""/></div>
    				    <%--<div class="sale"></div>Precio --%>
    			          <div class="mask">
                         <div class="info"><i class="search"> </i> Prerrequisitos del curso</div>
@@ -238,7 +238,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                   <div class="col-md-3">
    			  <div class="grid1">
    				<div class="view view-first">
-                  <div class="index_img"><img src="multimedia/imagenes/pic1.jpg" class="img-responsive" alt=""/></div>
+                  <div class="index_img"><img src="multimedia/imagenes/dibujo4.jpg" class="img-responsive" alt=""/></div>
    				    <%--<div class="sale"></div>Precio --%>
    			          <div class="mask">
                         <div class="info"><i class="search"> </i> Prerrequisitos del curso</div>
@@ -262,7 +262,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                   <div class="col-md-3">
    			  <div class="grid1">
    				<div class="view view-first">
-                  <div class="index_img"><img src="multimedia/imagenes/pic1.jpg" class="img-responsive" alt=""/></div>
+                  <div class="index_img"><img src="multimedia/imagenes/programacion4.png" class="img-responsive" alt=""/></div>
    				    <%--<div class="sale"></div>Precio --%>
    			          <div class="mask">
                         <div class="info"><i class="search"> </i> Prerrequisitos del curso</div>
@@ -290,8 +290,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    	    <div class="middle_grid wow fadeInUp" data-wow-delay="0.4s">
    			<div class="col-md-6">
    			   <div class="grid1">
-   			     <div class="index_img"><img src="multimedia/imagenes/pic4.jpg" class="img-responsive" alt=""/></div>
-   				  <i class="m_home"> </i>
+   			     <div class="index_img1"><img src="multimedia/imagenes/comentario5.jpg" class="img-responsive" alt=""/></div>
+   				  <i class="m_home1"> </i>
                   <ul class="vision">
                   	 <li>Testimonio</li>
                   	 <li class="desc"><a href="#"> <img src="multimedia/imagenes/star1.png" alt="">(236)</a></li>
@@ -312,7 +312,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    			</div>
    			<div class="col-md-6">
    			   <div class="grid1">
-   			     <div class="index_img1"><img src="multimedia/imagenes/pic5.jpg" class="img-responsive" alt=""/></div>
+   			     <div class="index_img1"><img src="multimedia/imagenes/comentario5.jpg" class="img-responsive" alt=""/></div>
    				  <i class="m_home1"> </i>
                   <ul class="vision">
                   	 <li>TESTIMONIO</li>
@@ -338,7 +338,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    			<div class="col-md-3">
    			  <div class="grid1">
    				<div class="view view-first">
-                  <div class="index_img"><img src="multimedia/imagenes/pic1.jpg" class="img-responsive" alt=""/></div>
+                  <div class="index_img"><img src="multimedia/imagenes/diseño5.jpg" class="img-responsive" alt=""/></div>
    				    <%--<div class="sale"></div>Precio --%>
    			          <div class="mask">
                         <div class="info"><i class="search"> </i> Prerrequisitos del curso</div>
@@ -362,7 +362,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                   <div class="col-md-3">
    			  <div class="grid1">
    				<div class="view view-first">
-                  <div class="index_img"><img src="multimedia/imagenes/pic1.jpg" class="img-responsive" alt=""/></div>
+                  <div class="index_img"><img src="multimedia/imagenes/ofimatica1.png" class="img-responsive" alt=""/></div>
    				    <%--<div class="sale"></div>Precio --%>
    			          <div class="mask">
                         <div class="info"><i class="search"> </i> Prerrequisitos del curso</div>
@@ -386,7 +386,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                   <div class="col-md-3">
    			  <div class="grid1">
    				<div class="view view-first">
-                  <div class="index_img"><img src="multimedia/imagenes/pic1.jpg" class="img-responsive" alt=""/></div>
+                  <div class="index_img"><img src="multimedia/imagenes/cocina1.jpg" class="img-responsive" alt=""/></div>
    				    <%--<div class="sale"></div>Precio --%>
    			          <div class="mask">
                         <div class="info"><i class="search"> </i> Prerrequisitos del curso</div>
@@ -410,7 +410,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                   <div class="col-md-3">
    			  <div class="grid1">
    				<div class="view view-first">
-                  <div class="index_img"><img src="multimedia/imagenes/pic1.jpg" class="img-responsive" alt=""/></div>
+                  <div class="index_img"><img src="multimedia/imagenes/bisuteria.jpg" class="img-responsive" alt=""/></div>
    				    <%--<div class="sale"></div>Precio --%>
    			          <div class="mask">
                         <div class="info"><i class="search"> </i> Prerrequisitos del curso</div>
@@ -437,7 +437,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    		<div class="bottom_grid wow bounce" data-wow-delay="0.4s">
    		  <div class="col-md-6">
    			   <div class="grid1">
-   			     <div class="index_img1"><img src="multimedia/imagenes/pic5.jpg" class="img-responsive" alt=""/></div>
+   			     <div class="index_img1"><img src="multimedia/imagenes/comentario6.jpg" class="img-responsive" alt=""/></div>
    				  <i class="m_home1"> </i>
                   <ul class="vision">
                   	 <li>TESTIMONIO</li>
@@ -445,7 +445,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                   </ul>
    				  <div class="inner_wrap1">
    				 	<ul class="item_module">
-   				 	 	<li class="module_left"><img src="multimedia/imagenes/m2.jpg" class="img-responsive" alt=""/></li>
+   				 	 	<li class="module_left"><img src="multimedia/imagenes/m1.jpg" class="img-responsive" alt=""/></li>
    				 	 	<li class="module_right">
    				 	 		<img src="multimedia/imagenes/m_star.png" class="img-responsive" alt=""/>
    				 	 		<h5>Mariela Rodruiguez</h5>
@@ -459,7 +459,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    			</div>
    			<div class="col-md-6">
    			   <div class="grid1">
-   			     <div class="index_img1"><img src="multimedia/imagenes/pic5.jpg" class="img-responsive" alt=""/></div>
+   			     <div class="index_img1"><img src="multimedia/imagenes/comentario6.jpg" class="img-responsive" alt=""/></div>
    				  <i class="m_home1"> </i>
                   <ul class="vision">
                   	 <li>TESTIMONIO</li>
@@ -483,7 +483,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    			</div>
    		  </div>
    		  <div class="offering">
-   		  	  <h2>¿Qué puede ofrecerte DuHoot a ti ?</h2>
+   		  	  <h2>¿Qué puede ofrecerte CourseDemy a ti ?</h2>
    		  	  <h3>¡Somos lideres en enseñanza virtual!</h3>
    		  	  <ul class="icons wow fadeInUp" data-wow-delay="0.4s">
    		  	  	 <li><i class="icon1"> </i><span class="one"> </span></li>
@@ -498,7 +498,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    		  	  	  <ul class="service_grid">
    	   				<i class="s1"> </i>
    	   				 <li class="desc1 wow fadeInRight" data-wow-delay="0.4s">
-   	   				   <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum</p>
+   	   				   <p>CourseDemy es una plataforma educativa asociada con las universidades y organizaciones más renombradas de todo el mundo que ofrece cursos en línea que cualquiera puede realizar.</p>
    	   				 </li>
    	   				 <div class="clearfix"> </div>
    	   			   </ul>
@@ -507,7 +507,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    		  	  	  <ul class="service_grid">
    	   				<i class="s2"> </i>
    	   				 <li class="desc1 wow fadeInRight" data-wow-delay="0.4s">
-   	   				   <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum</p>
+   	   				   <p>Queremos ayudarte a aprender mejor y más rápido. Por eso hemos diseñado nuestra plataforma basada en métodos de enseñanza probados por los mejores investigadores.</p>
    	   				 </li>
    	   				 <div class="clearfix"> </div>
    	   			   </ul>
@@ -533,23 +533,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	  </div>
 	  <div class="footer_grids">
 	     <div class="footer-grid">
-			<h4>Ipsum Quis</h4>
+			<h4>Menú</h4>
 			<ul class="list1">
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="#">Mirum est</a></li>
-				<li><a href="#">placerat facer</a></li>
-				<li><a href="#">claritatem</a></li>
-				<li><a href="#">sollemnes </a></li>
+				<li><a href="contact.html">Inicio</a></li>
+				<li><a href="#">Cursos</a></li>
+				<li><a href="#">Diplomados</a></li>
+				<li><a href="#">Ofertas</a></li>
+				<li><a href="#">Contacto </a></li>
 			</ul>
 		  </div>
 		  <div class="footer-grid">
-			<h4>Quis Ipsum</h4>
+			<h4>Más</h4>
 			<ul class="list1">
-				<li><a href="#">placerat facer</a></li>
-				<li><a href="#">claritatem</a></li>
-				<li><a href="#">sollemnes </a></li>
-				<li><a href="#">Claritas</a></li>
-				<li><a href="#">Mirum est</a></li>
+				<li><a href="#">Términos</a></li>
+				<li><a href="#">Privacidad</a></li>
+				<li><a href="#">Ayuda </a></li>
+				<li><a href="#">Docentes</a></li>
+				<li><a href="#">Plataforma Virtual</a></li>
 			</ul>
 		  </div>
 		  <div class="footer-grid last_grid">
@@ -561,7 +561,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			  <li><a href=""><i class="u_tube"> </i> </a></li>
 		 	</ul>
 		 	<div class="copy wow fadeInRight" data-wow-delay="0.4s">
-              <p>&copy; Template by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+              <p>&copy; 2015 CourseDemy Inc. Todos los derechos reservado.</p>
 	        </div>
 		  </div>
 		  <div class="clearfix"> </div>

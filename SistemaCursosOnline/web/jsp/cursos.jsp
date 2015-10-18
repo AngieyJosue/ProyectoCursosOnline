@@ -14,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Duhoot Bootstarp Website Template | Living :: w3layouts</title>
+<title>CourseDemy</title>
 <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- Custom Theme files -->
@@ -135,7 +135,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <h2 class="title block-title">Cursos Recientes</h2>
             <div class="row">
-                <div class="col s12 l5" data-wow-delay="0.4s">
+                <!--Inicia el curso 1-->
+                <div class="col s12 m6 l4 grey lighten-5">
                     <div class="living_box ">                        
                             <img src="../multimedia/imagenes/l1.jpg" class="img-responsive" alt=""/>
                             <span class="sale-box">
@@ -145,38 +146,165 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <table border="1" class="propertyDetails">
                             <tbody>
                                 <tr>
-                                    <td><img src="../multimedia/imagenes/area.png" alt="" style="margin-right:7px;">2,412m</td>
-                                    <td><img src="../multimedia/imagenes/bed.png" alt="" style="margin-right:7px;">6 Beds</td>
-                                    <td><img src="../multimedia/imagenes/drop.png" alt="" style="margin-right:7px;">3 Baths</td>
+                                    <td ><p>Fecha &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inicio</p><i class="tiny material-icons">today</i>28/10/15</td>
+                                    <td ><p>Fecha Finalización</p><i class="tiny material-icons">today</i>28/10/15</td>
+                                    <td ><p>Participantes</p><i class="tiny material-icons">supervisor_account</i>3</td>
                                 </tr>
                             </tbody>
-                        </table>
-                            
-                    </div>
-                </div>   
-                <div class="col s12 l7 ">
-                    <div class="living_box ">
-                        <h6>Informacion del curso</h6>
+                        </table>   
                         <div class="living_desc">
                                 <h3><a href="#">INGLÉS</a></h3>
                                 <p>Inicia el Inscribete ya! </p>
-                                <a href="#modalIngles" class="btn3 modal-trigger">Comprar</a>
-                                <div class="col s12 modal" id="modalIngles">
-                                    <h4>Curso de Inglés Básico</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
-                                        molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
-                                        atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                <p class="price">Precio:$687,000</p>
+                                <div class="clearfix"> </div>
+                                <a href="#modalIngles" class="btn3 modal-trigger">Ver Detalle</a>                                
+                                <div class="col s12  modal " id="modalIngles">
+                                    <div class="card">
+                                       
+                                        <div class="card-image">
+                                            <img src="../multimedia/imagenes/pic4.jpg">
+                                            <h4 class="card-title ">Nombre del Curso</h4>
+                                        </div>
+                                        <div class="card-content">                                            
+                                            <h5>Descripción:</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                            <h5>Pre-rrequisitos:</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                        </div>
+                                    </div>                                    
                                     <div class="action-bar">
                                         <a href="#" class="btn-flat modal-action modal-close">Cerrar</a>
                                     </div>
-                                </div>                        
-                                <a href="formCurso.jsp" class="btnSubirImagenes" id="">Curso</a>                        
-                                <p class="price">$687,000</p>
-                            </div>
-                    </div>
-                    
-                </div>
-            </div>
+                                </div>                      
+                                <a href="#" class="btnSubirImagenes" id="">Comprar</a>                                                        
+                        </div>
+                    </div>                    
+                </div> 
+                <!--Finaliza el curso 1-->
+                <!--Inicia el curso 2-->
+                <div class="col s12 m6 l4 grey lighten-5">
+                    <div class="living_box ">                        
+                            <img src="../multimedia/imagenes/l1.jpg" class="img-responsive" alt=""/>
+                            <span class="sale-box">
+                                <span class="sale-label">IDIOMAS</span>
+                            </span>                                                    
+                        
+                        <table border="1" class="propertyDetails">
+                            <tbody>
+                                <tr>
+                                    <td ><p>Fecha &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inicio</p><i class="tiny material-icons">today</i>28/10/15</td>
+                                    <td ><p>Fecha Finalización</p><i class="tiny material-icons">today</i>28/10/15</td>
+                                    <td ><p>Participantes</p><i class="tiny material-icons">supervisor_account</i>3</td>
+                                </tr>
+                            </tbody>
+                        </table>   
+                        <div class="living_desc">
+                                <h3><a href="#">INGLÉS</a></h3>
+                                <p>Inicia el Inscribete ya! </p>
+                                <p class="price">Precio:$687,000</p>
+                                <div class="clearfix"> </div>
+                                <a href="#modalIngles" class="btn3 modal-trigger">Ver Detalle</a>                                
+                                <div class="col s12  modal " id="modalIngles">
+                                    <div class="card">
+                                       
+                                        <div class="card-image">
+                                            <img src="../multimedia/imagenes/pic4.jpg">
+                                            <h4 class="card-title ">Nombre del Curso</h4>
+                                        </div>
+                                        <div class="card-content">                                            
+                                            <h5>Descripción:</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                            <h5>Pre-rrequisitos:</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                        </div>
+                                    </div>                                    
+                                    <div class="action-bar">
+                                        <a href="#" class="btn-flat modal-action modal-close">Cerrar</a>
+                                    </div>
+                                </div>                      
+                                <a href="#" class="btnSubirImagenes" id="">Comprar</a>                                                        
+                        </div>
+                    </div>                    
+                </div> 
+                <!--Finaliza el curso 2-->
+                <!--Inicia el curso 3-->
+                <div class="col s12 m6 l4 grey lighten-5">
+                    <div class="living_box ">                        
+                            <img src="../multimedia/imagenes/l1.jpg" class="img-responsive" alt=""/>
+                            <span class="sale-box">
+                                <span class="sale-label">IDIOMAS</span>
+                            </span>                                                    
+                        
+                        <table border="1" class="propertyDetails">
+                            <tbody>
+                                <tr>
+                                    <td ><p>Fecha &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inicio</p><i class="tiny material-icons">today</i>28/10/15</td>
+                                    <td ><p>Fecha Finalización</p><i class="tiny material-icons">today</i>28/10/15</td>
+                                    <td ><p>Participantes</p><i class="tiny material-icons">supervisor_account</i>3</td>
+                                </tr>
+                            </tbody>
+                        </table>   
+                        <div class="living_desc">
+                                <h3><a href="#">INGLÉS</a></h3>
+                                <p>Inicia el Inscribete ya! </p>
+                                <p class="price">Precio:$687,000</p>
+                                <div class="clearfix"> </div>
+                                <a href="#modalIngles" class="btn3 modal-trigger">Ver Detalle</a>                                
+                                <div class="col s12  modal " id="modalIngles">
+                                    <div class="card">
+                                       
+                                        <div class="card-image">
+                                            <img src="../multimedia/imagenes/pic4.jpg">
+                                            <h4 class="card-title ">Nombre del Curso</h4>
+                                        </div>
+                                        <div class="card-content">                                            
+                                            <h5>Descripción:</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                            <h5>Pre-rrequisitos:</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                        </div>
+                                    </div>                                    
+                                    <div class="action-bar">
+                                        <a href="#" class="btn-flat modal-action modal-close">Cerrar</a>
+                                    </div>
+                                </div>                      
+                                <a href="#" class="btnSubirImagenes" id="">Comprar</a>                                                        
+                        </div>
+                    </div>                    
+                </div> 
+                <!--Finaliza el curso 3-->
+                      
+            </div>              
         </div>
     </div>
     <div class="living_bottom">
