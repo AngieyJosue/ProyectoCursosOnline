@@ -135,30 +135,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <h2 class="title block-title">Cursos Recientes</h2>
             <div class="row">
-                <div class="col-md-12 wow fadeInLeft" data-wow-delay="0.4s">
-                    <div class="living_box">
-                        <a href="#">
+                <div class="col s12 l5" data-wow-delay="0.4s">
+                    <div class="living_box ">                        
                             <img src="../multimedia/imagenes/l1.jpg" class="img-responsive" alt=""/>
                             <span class="sale-box">
                                 <span class="sale-label">IDIOMAS</span>
-                            </span>
-                        </a>
-                        <div class="living_desc">
-                            <h3><a href="#">INGLÉS</a></h3>
-                            <p>Inicia el Inscribete ya! </p>
-                            <a href="#modalIngles" class="btn3 modal-trigger">Ver Detalle</a>
-                            <div class="col s12 modal" id="modalIngles">
-                                <h4>Curso de Inglés Básico</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
-                                    molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
-                                    atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
-                                <div class="action-bar">
-                                    <a href="#" class="btn-flat modal-action modal-close">Cerrar</a>
-                                </div>
-                            </div>                        
-                            <a href="formCurso.jsp" class="btnSubirImagenes" id="">Curso</a>                        
-                            <p class="price">$687,000</p>
-                        </div>
+                            </span>                        
+                            <div class="living_desc">
+                                <h3><a href="#">INGLÉS</a></h3>
+                                <p>Inicia el Inscribete ya! </p>
+                                <a href="#modalIngles" class="btn3 modal-trigger">Comprar</a>
+                                <div class="col s12 modal" id="modalIngles">
+                                    <h4>Curso de Inglés Básico</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                        molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                        atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                    <div class="action-bar">
+                                        <a href="#" class="btn-flat modal-action modal-close">Cerrar</a>
+                                    </div>
+                                </div>                        
+                                <a href="formCurso.jsp" class="btnSubirImagenes" id="">Curso</a>                        
+                                <p class="price">$687,000</p>
+                            </div>
+                        
                         <table border="1" class="propertyDetails">
                             <tbody>
                                 <tr>
@@ -168,8 +167,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </tr>
                             </tbody>
                         </table>
+                            
                     </div>
-                </div>            
+                </div>   
+                <div class="col s12 l7 ">
+                    <div class="living_box ">
+                        <h6>Informacion del curso</h6>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </div>

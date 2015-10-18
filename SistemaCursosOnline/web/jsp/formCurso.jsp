@@ -55,15 +55,22 @@
             </div>   
         </div>
         <div class="row">
-             <div class="input-field col s6">
-              <i class="material-icons prefix">perm_contact_calendar</i>
-              <input id="fechaInicio" type="date" class="datepicker">
-              <label for="fechaInicio">Fecha Inicio</label>
+            <div class="col s6">
+                <label for="fechaInicio">Fecha Inicio</label>
+            </div> 
+            <div class="col s6">
+                <label for="fechaFinalizacion">Fecha Finalización</label>
+            </div> 
+        </div>
+        <div class="row">
+             <div class="input-field col s6">                
+                <i class="material-icons prefix">perm_contact_calendar</i>
+                <input id="fechaInicio" type="date" class="datepicker">
+              
             </div>
             <div class="input-field col s6">
               <i class="material-icons prefix">perm_contact_calendar</i>
-              <input id="fechaFinalizacion" type="date" class="datepicker">
-              <label for="fechaFinalizacion">Fecha Finalización</label>
+              <input id="fechaFinalizacion" type="date" class="datepicker">              
             </div>                                    
         </div>  
          <%--
