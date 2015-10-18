@@ -140,23 +140,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src="../multimedia/imagenes/l1.jpg" class="img-responsive" alt=""/>
                             <span class="sale-box">
                                 <span class="sale-label">IDIOMAS</span>
-                            </span>                        
-                            <div class="living_desc">
-                                <h3><a href="#">INGLÉS</a></h3>
-                                <p>Inicia el Inscribete ya! </p>
-                                <a href="#modalIngles" class="btn3 modal-trigger">Comprar</a>
-                                <div class="col s12 modal" id="modalIngles">
-                                    <h4>Curso de Inglés Básico</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
-                                        molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
-                                        atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
-                                    <div class="action-bar">
-                                        <a href="#" class="btn-flat modal-action modal-close">Cerrar</a>
-                                    </div>
-                                </div>                        
-                                <a href="formCurso.jsp" class="btnSubirImagenes" id="">Curso</a>                        
-                                <p class="price">$687,000</p>
-                            </div>
+                            </span>                                                    
                         
                         <table border="1" class="propertyDetails">
                             <tbody>
@@ -173,6 +157,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col s12 l7 ">
                     <div class="living_box ">
                         <h6>Informacion del curso</h6>
+                        <div class="living_desc">
+                                <h3><a href="#">INGLÉS</a></h3>
+                                <p>Inicia el Inscribete ya! </p>
+                                <a href="#modalIngles" class="btn3 modal-trigger">Comprar</a>
+                                <div class="col s12 modal" id="modalIngles">
+                                    <h4>Curso de Inglés Básico</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
+                                        molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
+                                        atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
+                                    <div class="action-bar">
+                                        <a href="#" class="btn-flat modal-action modal-close">Cerrar</a>
+                                    </div>
+                                </div>                        
+                                <a href="formCurso.jsp" class="btnSubirImagenes" id="">Curso</a>                        
+                                <p class="price">$687,000</p>
+                            </div>
                     </div>
                     
                 </div>
