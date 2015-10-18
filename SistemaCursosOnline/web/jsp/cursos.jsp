@@ -135,7 +135,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <h2 class="title block-title">Cursos Recientes</h2>
             <div class="row">
-                <div class="col-md-4 wow fadeInLeft" data-wow-delay="0.4s">
+                <div class="col-md-12 wow fadeInLeft" data-wow-delay="0.4s">
                     <div class="living_box">
                         <a href="#">
                             <img src="../multimedia/imagenes/l1.jpg" class="img-responsive" alt=""/>

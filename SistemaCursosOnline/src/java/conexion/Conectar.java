@@ -10,7 +10,7 @@ public class Conectar {
     public Conectar() {
         try {
             this.driver="com.mysql.jdbc.Driver";
-            this.url="jdbc:mysql://localhost:3306/cursosonline";
+            this.url="jdbc:mysql://localhost:3306/proyectocursosonline";
             this.user="root";
             this.pass="Itca123";  
             JOptionPane.showMessageDialog(null, "Conexión ha sido exitosa.");
