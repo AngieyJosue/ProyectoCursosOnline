@@ -168,8 +168,7 @@ public class Curso {
         return lst;
    }
     public String insertarCurso(Object obj){
-        Curso curso= (Curso) obj;//Estamos haciendo un casting porque el objeto
-        //lo convertimos en una variable tipo empleado        
+        Curso curso= (Curso) obj;       
         String sql="insert into curso values(?,?,?,?,?,?,?,?)";
         String respuesta;
         try {
@@ -187,7 +186,7 @@ public class Curso {
             int registros=pst.executeUpdate();//exectuteQuery solo para select
             //executeUpdate es para insert delete update
             //se declara entero porqe puede dividir el numero de valores eliminados
-            respuesta=registros +" insertados correctamente en la tabla Cliente";
+            respuesta=registros +" insertados correctamente en la tabla Curso";
         } catch (Exception e) {
             respuesta=e.getMessage();             
         }
@@ -195,8 +194,7 @@ public class Curso {
     }
     
     public String modificarCurso(Object obj){
-        Curso curso= (Curso) obj;//Estamos haciendo un casting porque el objeto
-        //lo convertimos en una variable tipo empleado       
+        Curso curso= (Curso) obj;      
         String sql="update curso set idPersona=?,nombreCurso=?,fechaInicio=?,fechaFinalizacion=?,costo=?,requisitos=?,numParticipantes=?,rutaImagen=? where idCurso=?";
         String respuesta;
         try {

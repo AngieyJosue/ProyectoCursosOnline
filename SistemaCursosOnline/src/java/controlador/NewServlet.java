@@ -4,24 +4,26 @@
  * and open the template in the editor.
  */
 package controlador;
-import modelo.*;
-import java.util.*;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.Curso;
 
 /**
  *
  * @author Josue
  */
-
-public class controladorCurso extends HttpServlet {
+public class NewServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,12 +38,11 @@ public class controladorCurso extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            Curso curso = new Curso();
+           Curso curso = new Curso();
             List<Curso> lst = new ArrayList();
             String respuesta="";
             RequestDispatcher rd=null;
-            
-            try {
+             try {
                 if(request.getAttribute("btnInsertar")!=null){
                     DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                     Date fechaInicio=null;

@@ -1,7 +1,7 @@
 <%-- 
     Document   : living
     Created on : 05-oct-2015, 8:08:38
-    Author     : Angelica
+    Author     : Josue
 --%>
 <%@page import="java.util.ArrayList" %>
 <%@page import="modelo.*" %>
@@ -15,6 +15,7 @@
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
        <script language="JavaScript">
            function cargar(idCurso, nombreCurso,fechaInicio,fechaFinalizacion,costo,requisitos,numParticipantes,rutaImagen){
@@ -47,7 +48,7 @@
   <div class="container">
     <h3 class="center-align"><font color="#ee6e73">Formulario de Mantenimiento de Cursos</font></h3>
      <div class="row">
-      <form class="col s12" name="frmCurso" action="controladorCurso" method="POST">
+      <form class="col s12" name="frmCurso" action="NewServlet" method="POST">
         <div class="row">
             <div class="input-field col s12 l4">
               <input id="idCurso" name="txtIdCurso" type="text" class="validate">
