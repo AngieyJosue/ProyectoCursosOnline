@@ -158,12 +158,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <p class="price">Precio:$687,000</p>
                                 <div class="clearfix"> </div>
                                 <a href="#modalIngles" class="btn3 modal-trigger">Ver Detalle</a>                                
-                                <div class="col s12  modal " id="modalIngles">
+                                <div class="col l12  modal " id="modalIngles">
                                     <div class="card">
                                        
                                         <div class="card-image">
-                                            <img src="../multimedia/imagenes/pic4.jpg">
-                                            <h4 class="card-title ">Nombre del Curso</h4>
+                                            <img src="../multimedia/imagenes/banner_modal.jpg">
+                                            <h4 class="right-align card-title "><font id="nombreBanner"color="#00695c">Nombre del Curso</font></h4>
                                         </div>
                                         <div class="card-content">                                            
                                             <h5>Descripción:</h5>
@@ -183,7 +183,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>
                                     </div>                                    
                                     <div class="action-bar">
-                                        <a href="#" class="btn-flat modal-action modal-close">Cerrar</a>
+                                        <a href="#" class="btn-flat modal-action modal-close ">Cerrar</a>
                                     </div>
                                 </div>                      
                                 <a href="#" class="btnSubirImagenes" id="">Comprar</a>                                                        

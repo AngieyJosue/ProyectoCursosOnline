@@ -14,8 +14,7 @@ import javax.swing.JOptionPane;
  * @author Josue
  */
 public class Curso {
-    private String idCurso;
-    private Multimedia Multimedia;
+    private String idCurso;   
     private Persona Persona;    
     private String nombreCurso;
     private Date fechaInicio;
@@ -23,7 +22,7 @@ public class Curso {
     private double costo;
     private String requisitos;   
     private int numParticipantes;
-    
+    private String rutaImagen;
     PreparedStatement pst;
     ResultSet rs;
     ResultSetMetaData meta;
@@ -32,9 +31,8 @@ public class Curso {
     public Curso() {
     }
 
-    public Curso(String idCurso, Multimedia Multimedia, Persona Persona, String nombreCurso, Date fechaInicio, Date fechaFinalizacion, double costo, String requisitos, int numParticipantes) {
+    public Curso(String idCurso, Persona Persona, String nombreCurso, Date fechaInicio, Date fechaFinalizacion, double costo, String requisitos, int numParticipantes, String rutaImagen) {
         this.idCurso = idCurso;
-        this.Multimedia = Multimedia;
         this.Persona = Persona;
         this.nombreCurso = nombreCurso;
         this.fechaInicio = fechaInicio;
@@ -42,7 +40,8 @@ public class Curso {
         this.costo = costo;
         this.requisitos = requisitos;
         this.numParticipantes = numParticipantes;
-    }
+        this.rutaImagen = rutaImagen;       
+    }        
 
     public String getIdCurso() {
         return idCurso;
@@ -50,14 +49,6 @@ public class Curso {
 
     public void setIdCurso(String idCurso) {
         this.idCurso = idCurso;
-    }
-
-    public Multimedia getMultimedia() {
-        return Multimedia;
-    }
-
-    public void setMultimedia(Multimedia Multimedia) {
-        this.Multimedia = Multimedia;
     }
 
     public Persona getPersona() {
@@ -80,7 +71,7 @@ public class Curso {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {        
+    public void setFechaInicio(Date fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
@@ -115,6 +106,14 @@ public class Curso {
     public void setNumParticipantes(int numParticipantes) {
         this.numParticipantes = numParticipantes;
     }
+
+    public String getRutaImagen() {
+        return rutaImagen;
+    }
+
+    public void setRutaImagen(String rutaImagen) {
+        this.rutaImagen = rutaImagen;
+    }            
 
     public ArrayList<Object[]> mostrarCurso (){
     String consu="select * from curso";
@@ -178,16 +177,15 @@ public class Curso {
             Class.forName(bd.getDriver());
             conex=DriverManager.getConnection(bd.getUrl(),bd.getUser(),bd.getPass());
             pst=conex.prepareStatement(sql);
-            pst.setString(1,curso.getIdCurso());
-            pst.setString(2,curso.getMultimedia().getIdMultimedia());
-            pst.setString(3,curso.getPersona().getNombrePersona());
-            pst.setString(4,curso.getNombreCurso());
-            pst.setString(5,String.valueOf(curso.getFechaInicio())); 
-            pst.setString(6,String.valueOf(curso.getFechaFinalizacion())); 
-            pst.setDouble(7,curso.getCosto());
-            pst.setString(8,curso.getRequisitos());
-            pst.setInt(9,curso.getNumParticipantes());
-            
+            pst.setString(1,curso.getIdCurso());            
+            pst.setString(2,curso.getPersona().getNombrePersona());
+            pst.setString(3,curso.getNombreCurso());
+            pst.setString(4,String.valueOf(curso.getFechaInicio())); 
+            pst.setString(5,String.valueOf(curso.getFechaFinalizacion())); 
+            pst.setDouble(6,curso.getCosto());
+            pst.setString(7,curso.getRequisitos());
+            pst.setInt(8,curso.getNumParticipantes());
+            pst.setString(9,curso.getRutaImagen());
             int registros=pst.executeUpdate();//exectuteQuery solo para select
             //executeUpdate es para insert delete update
             //se declara entero porqe puede dividir el numero de valores eliminados
@@ -201,21 +199,21 @@ public class Curso {
     public String modificarCurso(Object obj){
         Curso curso= (Curso) obj;//Estamos haciendo un casting porque el objeto
         //lo convertimos en una variable tipo empleado       
-        String sql="update curso set idMultimedia=?,idPersona=?,nombreCurso=?,fechaInicio=?,fechaFinalizacion=?,costo=?,requisitos=?,numParticipantes=? where idCurso=?";
+        String sql="update curso set idPersona=?,nombreCurso=?,fechaInicio=?,fechaFinalizacion=?,costo=?,requisitos=?,numParticipantes=?,rutaImagen=? where idCurso=?";
         String respuesta;
         try {
             Class.forName(bd.getDriver());
             conex=DriverManager.getConnection(bd.getUrl(),bd.getUser(),bd.getPass());
             pst=conex.prepareStatement(sql);
-            pst.setString(9,curso.getIdCurso());
-            pst.setString(1,curso.getMultimedia().getIdMultimedia());
-            pst.setString(2,curso.getPersona().getNombrePersona());
-            pst.setString(3,curso.getNombreCurso());
-            pst.setString(4,String.valueOf(curso.getFechaInicio())); 
-            pst.setString(5,String.valueOf(curso.getFechaFinalizacion())); 
-            pst.setDouble(6,curso.getCosto());
-            pst.setString(7,curso.getRequisitos());
-            pst.setInt(8,curso.getNumParticipantes());           
+            pst.setString(9,curso.getIdCurso());            
+            pst.setString(1,curso.getPersona().getNombrePersona());
+            pst.setString(2,curso.getNombreCurso());
+            pst.setString(3,String.valueOf(curso.getFechaInicio())); 
+            pst.setString(4,String.valueOf(curso.getFechaFinalizacion())); 
+            pst.setDouble(5,curso.getCosto());
+            pst.setString(6,curso.getRequisitos());
+            pst.setInt(7,curso.getNumParticipantes());           
+            pst.setString(8,curso.getRutaImagen());
             
             int registros=pst.executeUpdate();
             //executeUpdate es para insert delete update
@@ -247,5 +245,4 @@ public class Curso {
         }
         return respuesta;
     }
-    
 }

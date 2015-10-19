@@ -13,6 +13,9 @@ html, body{
    font-size: 100%;
    background:#fff; 
 }
+#nombreBanner{
+    margin-left: 1000px;
+}
 body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
