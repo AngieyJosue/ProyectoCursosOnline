@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 package controlador;
-
+import modelo.*;
+import java.util.ArrayList;
+import java.util.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Josue
  */
-@WebServlet(name = "controladorCurso", urlPatterns = {"/controladorCurso"})
+
 public class controladorCurso extends HttpServlet {
 
     /**
@@ -33,16 +37,68 @@ public class controladorCurso extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet controladorCurso</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet controladorCurso at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            Curso curso = new Curso();
+            List<Curso> lst = new ArrayList();
+            String respuesta="";
+            RequestDispatcher rd=null;
+            
+            try {
+                if(request.getAttribute("btnInsertar")!=null){
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+                    Date fechaInicio=null;
+                    Date fechaFinal=null;
+                    fechaInicio = df.parse(request.getParameter("fechaInicio"));
+                    fechaFinal = df.parse(request.getParameter("fechaFinal"));
+                   
+                    curso.setIdCurso(request.getParameter("txtIdCurso"));
+                    curso.setNombreCurso(request.getParameter("txtNombreCurso"));
+                    curso.setFechaInicio(fechaInicio);
+                    curso.setFechaFinalizacion(fechaFinal);
+                    curso.setCosto(Double.parseDouble(request.getParameter("txtCosto")));
+                    curso.setRequisitos(request.getParameter("txtRequisitos"));
+                    curso.setNumParticipantes(Integer.parseInt(request.getParameter("txtNumParticipantes")));
+                    curso.setRutaImagen(request.getParameter("txtRutaImagen"));                    
+                    respuesta=curso.insertarCurso(curso);
+                    request.setAttribute("respuesta",respuesta);
+                }else if(request.getAttribute("btnEliminar")!=null){
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+                    Date fechaInicio=null;
+                    Date fechaFinal=null;
+                    fechaInicio = df.parse(request.getParameter("fechaInicio"));
+                    fechaFinal = df.parse(request.getParameter("fechaFinal"));
+                   
+                    curso.setIdCurso(request.getParameter("txtIdCurso"));
+                    curso.setNombreCurso(request.getParameter("txtNombreCurso"));
+                    curso.setFechaInicio(fechaInicio);
+                    curso.setFechaFinalizacion(fechaFinal);
+                    curso.setCosto(Double.parseDouble(request.getParameter("txtCosto")));
+                    curso.setRequisitos(request.getParameter("txtRequisitos"));
+                    curso.setNumParticipantes(Integer.parseInt(request.getParameter("txtNumParticipantes")));
+                    curso.setRutaImagen(request.getParameter("txtRutaImagen"));                    
+                    respuesta=curso.eliminarCurso(curso);
+                    request.setAttribute("respuesta",respuesta);
+                }else if(request.getAttribute("btnModificar")!=null){
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+                    Date fechaInicio=null;
+                    Date fechaFinal=null;
+                    fechaInicio = df.parse(request.getParameter("fechaInicio"));
+                    fechaFinal = df.parse(request.getParameter("fechaFinal"));
+                   
+                    curso.setIdCurso(request.getParameter("txtIdCurso"));
+                    curso.setNombreCurso(request.getParameter("txtNombreCurso"));
+                    curso.setFechaInicio(fechaInicio);
+                    curso.setFechaFinalizacion(fechaFinal);
+                    curso.setCosto(Double.parseDouble(request.getParameter("txtCosto")));
+                    curso.setRequisitos(request.getParameter("txtRequisitos"));
+                    curso.setNumParticipantes(Integer.parseInt(request.getParameter("txtNumParticipantes")));
+                    curso.setRutaImagen(request.getParameter("txtRutaImagen"));                    
+                    respuesta=curso.modificarCurso(curso);
+                    request.setAttribute("respuesta",respuesta);
+                }
+                rd=request.getRequestDispatcher("formCurso.jsp");
+            } catch (Exception e) {
+            }
+            rd.forward(request, response);
         }
     }
 
