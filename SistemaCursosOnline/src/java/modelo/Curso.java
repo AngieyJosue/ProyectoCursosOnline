@@ -8,14 +8,14 @@ import conexion.Conectar;
 import java.util.Date;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 /**
  *
  * @author Josue
  */
 public class Curso {
-    private String idCurso;   
-    private Persona Persona;    
+    private String idCurso;      
     private String nombreCurso;
     private Date fechaInicio;
     private Date fechaFinalizacion;
@@ -31,9 +31,8 @@ public class Curso {
     public Curso() {
     }
 
-    public Curso(String idCurso, Persona Persona, String nombreCurso, Date fechaInicio, Date fechaFinalizacion, double costo, String requisitos, int numParticipantes, String rutaImagen) {
-        this.idCurso = idCurso;
-        this.Persona = Persona;
+    public Curso(String idCurso, String nombreCurso, Date fechaInicio, Date fechaFinalizacion, double costo, String requisitos, int numParticipantes, String rutaImagen) {
+        this.idCurso = idCurso;        
         this.nombreCurso = nombreCurso;
         this.fechaInicio = fechaInicio;
         this.fechaFinalizacion = fechaFinalizacion;
@@ -49,15 +48,7 @@ public class Curso {
 
     public void setIdCurso(String idCurso) {
         this.idCurso = idCurso;
-    }
-
-    public Persona getPersona() {
-        return Persona;
-    }
-
-    public void setPersona(Persona Persona) {
-        this.Persona = Persona;
-    }
+    }  
 
     public String getNombreCurso() {
         return nombreCurso;
@@ -115,11 +106,11 @@ public class Curso {
         this.rutaImagen = rutaImagen;
     }            
 
-    public ArrayList<Object[]> mostrarCurso (){
+    public List<Curso> mostrarCurso (){
     String consu="select * from curso";
-    ArrayList<Object[]> datos=new ArrayList<>();
+    List<Curso> lst=new ArrayList<>();
     
-        try {
+        try {            
             conex=DriverManager.getConnection
             (
                 bd.getUrl(),
@@ -129,63 +120,70 @@ public class Curso {
             
             pst=conex.prepareStatement(consu);
             rs=pst.executeQuery();
-            meta=rs.getMetaData();
             
-            while (rs.next()) {   
-                Object[] filas=new Object[meta.getColumnCount()];
-                for (int i = 0; i < filas.length; i++) {
-                    filas[i]=rs.getObject(i+1);
-                }
-                datos.add(filas);
+            while(rs.next()){
+                lst.add(new Curso(
+                    rs.getString("Id Curso"),
+                    rs.getString("Nombre Curso"),
+                    rs.getDate("Fecha Inicio"),
+                    rs.getDate("Fecha Finalizacion"),    
+                    rs.getDouble("Costo"),
+                    rs.getString("Requisitos"),
+                    rs.getInt("Numero Participantes"),
+                    rs.getString("Ruta Imagen")
+                ));
             }
-            rs.close();
+            
+            conex.close();
         } catch (SQLException e) {
             
             JOptionPane.showMessageDialog(null, "Error al mostrar datos en la tabla Curso "+ e);
            
         }
-     return datos;
+     return lst;
     }
-    public ArrayList<Object[]> filtrarCurso(String campo, String criterio){
-        ArrayList<Object[]> datos = new ArrayList<>();       
+    public List<Curso> filtrarCurso(String campo, String criterio){
+        List<Curso> lst = new ArrayList<>();       
          String sql="select * from curso where  " + campo + " like '%"+criterio +"%'";
            try {
                Class.forName(bd.getDriver());
                conex=DriverManager.getConnection(bd.getUrl(),bd.getUser(),bd.getPass());
                pst = conex.prepareStatement(sql);
                rs = pst.executeQuery();//ejecuta la consulta y guarda la consulta en la variable resulset.
-               meta = rs.getMetaData();
-               while (rs.next()) {
-                   Object[] fila = new Object[meta.getColumnCount()];//recorriendo el resulset lo guardo en la variable fila
-                   for(int i=0; i < fila.length; i++)
-                   {
-                       fila[i]= rs.getObject(i+1); 
-                   }
-                   datos.add(fila);
-               }
-               rs.close();
+               while(rs.next()){
+                lst.add(new Curso(
+                    rs.getString("Id Curso"),
+                    rs.getString("Nombre Curso"),
+                    rs.getDate("Fecha Inicio"),
+                    rs.getDate("Fecha Finalizacion"),    
+                    rs.getDouble("Costo"),
+                    rs.getString("Requisitos"),
+                    rs.getInt("Numero Participantes"),
+                    rs.getString("Ruta Imagen")
+                ));
+                }
+                conex.close();
            } catch (Exception e) {
            } 
-        return datos;
+        return lst;
    }
     public String insertarCurso(Object obj){
         Curso curso= (Curso) obj;//Estamos haciendo un casting porque el objeto
         //lo convertimos en una variable tipo empleado        
-        String sql="insert into curso values(?,?,?,?,?,?,?,?,?)";
+        String sql="insert into curso values(?,?,?,?,?,?,?,?)";
         String respuesta;
         try {
             Class.forName(bd.getDriver());
             conex=DriverManager.getConnection(bd.getUrl(),bd.getUser(),bd.getPass());
             pst=conex.prepareStatement(sql);
-            pst.setString(1,curso.getIdCurso());            
-            pst.setString(2,curso.getPersona().getNombrePersona());
-            pst.setString(3,curso.getNombreCurso());
-            pst.setString(4,String.valueOf(curso.getFechaInicio())); 
-            pst.setString(5,String.valueOf(curso.getFechaFinalizacion())); 
-            pst.setDouble(6,curso.getCosto());
-            pst.setString(7,curso.getRequisitos());
-            pst.setInt(8,curso.getNumParticipantes());
-            pst.setString(9,curso.getRutaImagen());
+            pst.setString(1,curso.getIdCurso());                        
+            pst.setString(2,curso.getNombreCurso());
+            pst.setString(3,String.valueOf(curso.getFechaInicio())); 
+            pst.setString(4,String.valueOf(curso.getFechaFinalizacion())); 
+            pst.setDouble(5,curso.getCosto());
+            pst.setString(6,curso.getRequisitos());
+            pst.setInt(7,curso.getNumParticipantes());
+            pst.setString(8,curso.getRutaImagen());
             int registros=pst.executeUpdate();//exectuteQuery solo para select
             //executeUpdate es para insert delete update
             //se declara entero porqe puede dividir el numero de valores eliminados
@@ -205,15 +203,14 @@ public class Curso {
             Class.forName(bd.getDriver());
             conex=DriverManager.getConnection(bd.getUrl(),bd.getUser(),bd.getPass());
             pst=conex.prepareStatement(sql);
-            pst.setString(9,curso.getIdCurso());            
-            pst.setString(1,curso.getPersona().getNombrePersona());
-            pst.setString(2,curso.getNombreCurso());
-            pst.setString(3,String.valueOf(curso.getFechaInicio())); 
-            pst.setString(4,String.valueOf(curso.getFechaFinalizacion())); 
-            pst.setDouble(5,curso.getCosto());
-            pst.setString(6,curso.getRequisitos());
-            pst.setInt(7,curso.getNumParticipantes());           
-            pst.setString(8,curso.getRutaImagen());
+            pst.setString(8,curso.getIdCurso());                        ;
+            pst.setString(1,curso.getNombreCurso());
+            pst.setString(2,String.valueOf(curso.getFechaInicio())); 
+            pst.setString(3,String.valueOf(curso.getFechaFinalizacion())); 
+            pst.setDouble(4,curso.getCosto());
+            pst.setString(5,curso.getRequisitos());
+            pst.setInt(6,curso.getNumParticipantes());           
+            pst.setString(7,curso.getRutaImagen());
             
             int registros=pst.executeUpdate();
             //executeUpdate es para insert delete update

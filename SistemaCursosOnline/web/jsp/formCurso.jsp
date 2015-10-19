@@ -5,6 +5,7 @@
 --%>
 <%@page import="java.util.ArrayList" %>
 <%@page import="modelo.*" %>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
  <!DOCTYPE html>
   <html>
@@ -16,27 +17,29 @@
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
        <script language="JavaScript">
-           function cargar(idCurso, idPersona, nombreCurso,fechaInicio,fechaFinalizacion,costo,requisitos,numParticipantes,rutaImagen){
-            document.frmCurso.txtIdCurso.value=idCurso;
-            document.frmCurso.txtRutaImagen.value=rutaImagen;
+           function cargar(idCurso, nombreCurso,fechaInicio,fechaFinalizacion,costo,requisitos,numParticipantes,rutaImagen){
+            document.frmCurso.txtIdCurso.value=idCurso;            
             document.frmCurso.txtNombreCurso.value=nombreCurso;
-            document.frmCurso.txtCosto.value=costo;
-            document.frmCurso.txtNumParticipantes.value=numParticipantes;
+            document.frmCurso.fechaInicio.value=fechaInicio;
+            document.frmCurso.fechaFinalizacion.value=fechaFinalizacion;
+            document.frmCurso.txtCosto.value=costo;           
             document.frmCurso.txtRequisitos.value=requisitos;
+            document.frmCurso.txtNumParticipantes.value=numParticipantes;
+            document.frmCurso.txtRutaImagen.value=rutaImagen;
         } 
        </script>
     </head>
     <% 
-        ArrayList<Object []> datos = new ArrayList<>();
+        List<Curso> lst = new ArrayList<>();
         Curso curso= new Curso();
         int tantos=0;
         if(request.getAttribute("respuesta")!=null){
             String resp=(String) request.getAttribute("respuesta");            
-            datos=curso.mostrarCurso();
+            lst=curso.mostrarCurso();
         }else if(request.getAttribute("filtro")!=null){
-            tantos=datos.size();
+            tantos=lst.size();
         }else{
-            datos=curso.mostrarCurso();
+            lst=curso.mostrarCurso();
         }
     %>
 <body>
@@ -96,14 +99,7 @@
               <i class="material-icons prefix">perm_contact_calendar</i>
               <input id="fechaFinalizacion" name="fechaFinalizacion" type="date" class="datepicker">              
             </div>                                    
-        </div>  
-         <%--
-        <div class="row">
-          <div class="input-field col s12">
-            <input disabled value="No soy editable" id="desactivado" type="text" class="validate">
-            <label for="desactivado">Campo desactivado</label>
-          </div>
-        </div>--%>                  
+        </div>                          
         <div class="row">
           <div class="input-field col s12">
             <textarea id="textarea" name="txtRequisitos" class="materialize-textarea"></textarea>
@@ -123,31 +119,16 @@
             </div>
             </center>
             
-        </div> 
-        <!--
-        <div class="row">
-            <div class="col s12">
-                <a href="#modalIngles" class="btn modal-trigger">Ver Detalle</a>
-                        <div class="col s12 modal" id="modalIngles">
-                            <h4>Curso de Inglés Básico</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet ipsa,
-                                molestiae assumenda, optio pariatur omnis qui veniam laudantium temporibus 
-                                atque dignissimos id impedit cumque, architecto. Nam inventore distinctio quis.</p>
-                            <div class="action-bar">
-                                <a href="#" class="btn-flat modal-action modal-close"></a>
-                            </div>
-                        </div>    
-            </div>
-        </div>-->
+        </div>        
         <div class="row">
             <div class="col s12">            
                 <table class="bordered hoverable responsive-table">
                     <tbody>
                         <tr>
                             <td>Campo</td>
-                            <td><select name="txtCampos">
-                                    <option value="Id_Curso">Id_Curso</option>
-                                    <option value="Id_Persona">Id_Persona</option>
+                            <td>
+                                <select name="txtCampos">
+                                    <option value="Id_Curso">Id_Curso</option>                                    
                                     <option value="Nombre_Curso">Nombre_Curso</option>
                                     <option value="Fecha_Inicio">Fecha_Inicio</option>
                                     <option value="Fecha_Finalizacion">Fecha_Finalizacion</option>
@@ -156,7 +137,8 @@
                                     <option value="Num_Participantes">Num_Participantes</option>
                                     <option value="Ruta_Imagen">Ruta_Imagen</option>
                                        
-                                </select></td>
+                                </select>
+                            </td>
                             <td>Criterio</td>
                             <td><input type="text" name="txtFiltro" value="" /></td>
                              <td>
@@ -165,39 +147,51 @@
                             </td>
                         </tr>
                     </tbody>                    
-                </table>            
+                </table>    
+                <% 
+                    if(tantos>0)out.println("se encontraron" + tantos + "registros...");
+                %>
+        
+                <table class="bordered hoverable responsive-table">
+                <thead>
+                    <tr>                        
+                        <th>Id Curso</th>
+                        <th>Nombre Curso</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Finalizacion</th>
+                        <th>Costo</th>
+                        <th>Requisitos</th>
+                        <th>Num Participantes</th>
+                        <th>Ruta Imagen</th>  
+                        <th>Cargar</th>
+                    </tr>
+                </thead>
+                <thbody>
+                    <% 
+                        for(Curso fila:lst){
+                    %>
+                    <tr>
+                        <td><%=fila.getIdCurso()%></td>
+                        <td><%=fila.getNombreCurso()%></td>
+                        <td><%=fila.getFechaInicio()%></td>
+                        <td><%=fila.getFechaFinalizacion()%></td>
+                        <td><%=fila.getCosto()%></td>
+                        <td><%=fila.getRequisitos()%></td>
+                        <td><%=fila.getNumParticipantes()%></td>
+                        <td><%=fila.getRutaImagen()%></td> 
+                        <td>
+                            <a href="javascript:cargar('<%=fila.getIdCurso()%>','<%=fila.getNombreCurso()%>','<%=fila.getFechaInicio()%>','<%=fila.getFechaFinalizacion()%>','<%=fila.getCosto()%>','<%=fila.getRequisitos()%>','<%=fila.getNumParticipantes()%>','<%=fila.getRutaImagen()%>')">Cargar</a>
+                        </td>
+                    </tr>  
+                    <%
+                        }
+                    %>
+                </thbody>
+            </table>
             </div>
         </div> 
       </form>
-        <% 
-            if(tantos>0)out.println("se encontraron" + tantos + "registros...");
-        %>
-        <table class="bordered hoverable responsive-table">
-            <thead>
-                <tr>
-                    <td>Nombre</td>
-                    <td>Apellido</td>
-                    <td>Edad</td>
-                </tr>
-            </thead>
-            <thbody>
-                <tr>
-                    <td>Angelica</td>
-                    <td>Aguilera</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>Angelica</td>
-                    <td>Aguilera</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>Angelica</td>
-                    <td>Aguilera</td>
-                    <td>20</td>
-                </tr>
-            </thbody>
-        </table>
+        
     </div>
   </div>
        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
