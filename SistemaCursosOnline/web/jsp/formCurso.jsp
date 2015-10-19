@@ -48,7 +48,7 @@
   <div class="container">
     <h3 class="center-align"><font color="#ee6e73">Formulario de Mantenimiento de Cursos</font></h3>
      <div class="row">
-      <form class="col s12" name="frmCurso" action="NewServlet" method="POST">
+      <form class="col s12" name="frmCurso" action="controladorCurso" method="POST">
         <div class="row">
             <div class="input-field col s12 l4">
               <input id="idCurso" name="txtIdCurso" type="text" class="validate">
